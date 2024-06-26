@@ -1,5 +1,5 @@
 body {
-  background-color: #fff3b1;
+  background-color: #f4ca47;
 }
 .container {
   max-width: 600px;
@@ -8,6 +8,7 @@ body {
   padding: 60px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 15px;
+  color: #195689;
 }
 .city {
   display: flex;
@@ -47,5 +48,6 @@ footer {
   text-align: center;
   font-weight: bold;
   font-size: 18px;
-  opacity: 0.7;
+
+  color: #195689;
 }
