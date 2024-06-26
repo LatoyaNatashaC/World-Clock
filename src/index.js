@@ -1,4 +1,4 @@
-setInterval(function () {
+function updateTime() {
   let losAngelesElement = document.querySelector("#los-angeles");
   let losAngelesDateElement = losAngelesElement.querySelector(".date");
   let losAngelesTimeElement = losAngelesElement.querySelector(".time");
@@ -8,14 +8,16 @@ setInterval(function () {
   losAngelesTimeElement.innerHTML = losAngelesTime.format(
     "h:mm:ss [<small>]A[</small>]"
   );
-}, 1000);
 
-let newYorkElement = document.querySelector("#new-york");
-let newYorkDateElement = newYorkElement.querySelector(".date");
-let newYorkTimeElement = newYorkElement.querySelector(".time");
-let newYorkTime = moment().tz("America/New_York");
+  let newYorkElement = document.querySelector("#new-york");
+  let newYorkDateElement = newYorkElement.querySelector(".date");
+  let newYorkTimeElement = newYorkElement.querySelector(".time");
+  let newYorkTime = moment().tz("America/New_York");
 
-newYorkDateElement.innerHTML = moment().format("MMMM Do YYYY");
-newYorkTimeElement.innerHTML = newYorkTime.format(
-  "h:mm:ss [<small>]A[</small>]"
-);
+  newYorkDateElement.innerHTML = moment().format("MMMM Do YYYY");
+  newYorkTimeElement.innerHTML = newYorkTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}
+updateTime();
+setInterval(updateTime, 1000);
