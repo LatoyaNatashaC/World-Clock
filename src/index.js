@@ -1,12 +1,15 @@
-let losAngelesElement = document.querySelector("#los-angeles");
-let losAngelesDateElement = losAngelesElement.querySelector(".date");
-let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-let losAngelesTime = moment().tz("America/Los_Angeles");
+setInterval(function () {
+  let losAngelesElement = document.querySelector("#los-angeles");
+  let losAngelesDateElement = losAngelesElement.querySelector(".date");
+  let losAngelesTimeElement = losAngelesElement.querySelector(".time");
+  let losAngelesTime = moment().tz("America/Los_Angeles");
 
-losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
-losAngelesTimeElement.innerHTML = losAngelesTime.format(
-  "h:mm:ss [<small>]A[</small>]"
-);
+  losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
+  losAngelesTimeElement.innerHTML = losAngelesTime.format(
+    "h:mm:ss [<small>]A[</small>]"
+  );
+}, 1000);
+
 let newYorkElement = document.querySelector("#new-york");
 let newYorkDateElement = newYorkElement.querySelector(".date");
 let newYorkTimeElement = newYorkElement.querySelector(".time");
