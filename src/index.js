@@ -40,7 +40,7 @@ function updateCity(event) {
             "h:mm:ss"
           )} <small>${cityTime.format("A")}</small></div>
         </div>
-        <a href="file:///Users/natasha/Documents/GitHub/World-Clock/index.html">All cities</a>
+        <a href="https://singular-gecko-015e2f.netlify.app/">All cities</a>
 
   `;
 }
